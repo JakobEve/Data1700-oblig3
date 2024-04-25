@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oslomet Kino</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Bestilling av Kinobilletter:</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form class="form">
+                <div class="form-group">
+                    <label for="filmer">Velg film:</label>
+                    <select name="filmer" class="form-control" id="filmer">
+                        <option value="" disabled selected>Velg film her</option>
+                        <option value="nemo">Nemo</option>
+                        <option value="frozen">Frozen</option>
+                        <option value="inception">Inception</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="antallBilletter">Antall:</label>
+                    <input type="number" class="form-control" id="antallBilletter" min="1">
+                </div>
+                <div class="form-group">
+                    <label for="fornavn">Fornavn</label>
+                    <input type="text" class="form-control" id="fornavn">
+                </div>
+                <div class="form-group">
+                    <label for="etternavn">Etternavn</label>
+                    <input type="text" class="form-control" id="etternavn">
+                </div>
+                <div class="form-group">
+                    <label for="telefonnr">Telefonnr</label>
+                    <input type="text" class="form-control" id="telefonnr">
+                </div>
+                <div class="form-group">
+                    <label for="epost">Epost</label>
+                    <input type="text" class="form-control" id="epost">
+                </div>
+            </form>
+
+            <button class="btn btn-primary" id="kjopBillett">Kjøp billett</button>
+        </div>
+        <div class="col-md-8">
+            <h2>Alle billetter</h2>
+            <div id="alleBilletter" class="table-responsive"></div>
+            <button class="btn btn-danger" id="slettBilletter">Slett alle billettene</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="billettBestilling.js"></script>
+</body>
+</html>
